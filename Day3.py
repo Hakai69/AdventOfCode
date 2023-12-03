@@ -1,5 +1,3 @@
-import re
-
 class Number():
     def __init__(self, value, beginning, line) -> None:
         self.value = value
@@ -40,9 +38,7 @@ with open("./Day3Input.txt", "r") as file:
                 symbols.append((j, i))
 
 symbols = frozenset(symbols)
-
 output = 0
-
 for number in numbers:
     if number.isSurrounded(symbols): output += number.value
 print(output)
